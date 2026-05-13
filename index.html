@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <title>Cyber Network Challenge</title>
+  <link rel="stylesheet"href="styles.css">
+</head>
+
+<body>
+  <!-- AUDIO -->
+
+    <div class="audio-control">
+    	<button id="btnMute">🔊</button>
+    	<input type="range" id="volumen" min="0" max="1" step="0.1" value="0.5">
+    </div>
+
+
+
+  <!-- FONDO -->
+  <div class="background-grid"></div>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="game-layout">
+
+    <!-- ==========================================
+         PANEL IZQUIERDO
+    =========================================== -->
+
+    <aside class="sidebar">
+
+      <!-- TÍTULO -->
+      <header>
+
+        <h1>
+          CYBER NETWORK
+        </h1>
+
+        <p class="subtitle">
+          Challenge Edition
+        </p>
+
+      </header>
+
+      <!-- ==========================================
+           ESTADÍSTICAS
+      =========================================== -->
+
+      <div class="stats">
+
+        <!-- PUNTAJE -->
+        <div class="stat-box">
+
+          <span>
+            Puntaje
+          </span>
+
+          <h2 id="score">
+            0
+          </h2>
+
+        </div>
+
+        <!-- ENERGÍA -->
+        <div class="energy-wrapper">
+
+          <div class="energy-header">
+
+            <span>
+              Energía
+            </span>
+
+            <span id="energyText">
+              100%
+            </span>
+
+          </div>
+
+          <div class="energy-bar">
+
+            <div
+              class="energy-fill energy-high"
+              id="energyFill">
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- TIEMPO -->
+        <div class="stat-box">
+
+          <span>
+            Tiempo
+          </span>
+
+          <h2 id="timer">
+            60
+          </h2>
+
+        </div>
+
+      </div>
+
+      <!-- ==========================================
+           RANGO
+      =========================================== -->
+
+      <div class="rank-box">
+
+        <h3>
+          Rango
+        </h3>
+
+        <p id="rankText">
+          Aprendiz
+        </p>
+
+      </div>
+
+      <!-- ==========================================
+           COMBO
+      =========================================== -->
+
+      <div
+        class="combo-box"
+        id="comboBox">
+
+        🔥 COMBO x0
+
+      </div>
+
+      <!-- ==========================================
+           PROGRESO
+      =========================================== -->
+
+      <div class="progress-container">
+
+        <p id="progressText">
+
+          Pregunta 1 / 40
+
+        </p>
+
+        <div class="progress-bar">
+
+          <div
+            class="progress-fill"
+            id="progressFill">
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ==========================================
+           BOTÓN INICIO
+      =========================================== -->
+
+      <button
+        class="start-btn"
+        id="startBtn">
+
+        INICIAR
+
+      </button>
+
+    </aside>
+
+    <!-- ==========================================
+         PANEL DERECHO
+    =========================================== -->
+
+    <main class="main-content">
+    
+      <!-- TARJETA PRINCIPAL -->
+      <div class="card">
+
+        <!-- CATEGORÍA -->
+        <div class="category-box">
+
+          <span id="categoryText">
+
+            Categoría
+
+          </span>
+
+        </div>
+
+        <!-- IMAGEN -->
+        <div class="image-container">
+
+          <img
+            id="deviceImage"
+            src="img/default.png"
+            alt="Dispositivo de Red">
+
+        </div>
+
+        <!-- PISTA -->
+        <div class="hint-container">
+
+          <h3>
+            Pista
+          </h3>
+
+          <p id="hintText">
+
+            Presiona el botón INICIAR
+
+          </p>
+
+        </div>
+
+        <!-- BOTÓN PISTA -->
+        <div class="controls">
+
+          <button id="nextHintBtn">
+
+            Mostrar Siguiente Pista
+
+          </button>
+
+        </div>
+
+        <!-- OPCIONES -->
+        <div
+          class="options-container"
+          id="optionsContainer">
+
+        </div>
+
+        <!-- RETROALIMENTACIÓN -->
+        <div
+          class="feedback"
+          id="feedback">
+
+        </div>
+
+      </div>
+
+      <!-- ==========================================
+           RESUMEN FINAL
+      =========================================== -->
+
+      <div
+        class="summary-container"
+        id="summaryContainer">
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- ==========================================
+       SONIDOS
+  =========================================== -->
+
+  <audio
+    id="correctSound"
+    src="sounds/correct.mp3">
+  </audio>
+
+  <audio
+    id="wrongSound"
+    src="sounds/wrong.mp3">
+  </audio>
+
+  <audio
+    id="comboSound"
+    src="sounds/combo.mp3">
+  </audio>
+
+   <audio 
+     id="bgMusic"
+     src="sounds/bg.mp3" loop>
+    </audio>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
+
