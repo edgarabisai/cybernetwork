@@ -77,21 +77,13 @@ body{
 ========================================== */
 
 .sidebar{
-
   width:340px;
-
   background:rgba(0,0,0,0.45);
-
   border-right:2px solid #00ffff;
-
   padding:25px;
-
   display:flex;
-
   flex-direction:column;
-
   gap:20px;
-
   box-shadow:0 0 25px rgba(0,255,255,0.3);
 }
 
@@ -129,11 +121,8 @@ header h1{
 ========================================== */
 
 .stats{
-
   display:flex;
-
   flex-direction:column;
-
   gap:18px;
 }
 
@@ -149,16 +138,12 @@ header h1{
 }
 
 .stat-box span{
-
   font-size:1.1rem;
-
   color:#bffcff;
 }
 
 .stat-box h2{
-
   font-size:2.3rem;
-
   margin-top:10px;
 }
 
@@ -167,57 +152,37 @@ header h1{
 ========================================== */
 
 .energy-wrapper{
-
   background:rgba(255,255,255,0.05);
-
   border:2px solid #00ffff;
-
   border-radius:15px;
-
   padding:15px;
-
   box-shadow:0 0 15px rgba(0,255,255,0.2);
 }
 
 .energy-header{
-
   display:flex;
-
   justify-content:space-between;
-
   align-items:center;
-
   margin-bottom:10px;
 }
 
 .energy-header span{
-
   font-size:1.1rem;
 }
 
 .energy-bar{
-
   width:100%;
-
   height:25px;
-
   background:#111;
-
   border-radius:20px;
-
   overflow:hidden;
-
   border:2px solid rgba(255,255,255,0.1);
 }
 
 .energy-fill{
-
   width:100%;
-
   height:100%;
-
   transition:0.4s;
-
   box-shadow:0 0 15px currentColor;
 }
 
@@ -240,17 +205,11 @@ header h1{
 ========================================== */
 
 .rank-box{
-
   background:rgba(255,255,255,0.05);
-
   border:2px solid #ff00ff;
-
   border-radius:15px;
-
   padding:20px;
-
   text-align:center;
-
   box-shadow:0 0 15px rgba(255,0,255,0.3);
 }
 
@@ -785,4 +744,30 @@ header h1{
 
     transform:scale(1);
   }
+}
+
+/* ==========================================
+   ESCALADO GLOBAL PARA LANDSCAPE MÓVIL
+========================================== */
+
+.app-wrapper{
+  width:100%;
+  height:100%;
+}
+
+/* SOLO móvil horizontal */
+@media (max-height:500px) and (orientation: landscape){
+
+  body{
+    overflow:hidden;
+  }
+
+  .app-wrapper{
+    transform: scale(0.7); /* ajustable */
+    transform-origin: top left;
+
+    width: 142.85%;  /* compensación */
+    height: 142.85%;
+  }
+
 }
