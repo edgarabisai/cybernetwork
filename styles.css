@@ -1,0 +1,768 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body{
+  background:#050816;
+  color:white;
+  overflow-x:hidden;
+  min-height:100vh;
+}
+
+/* ==========================================
+   AUDIO
+========================================== */
+
+.audio-control{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #111;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.audio-control button{
+    font-size: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.audio-control input{
+    cursor: pointer;
+}
+
+/* ==========================================
+   FONDO GAMER
+========================================== */
+
+.background-grid{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+
+  background-image:
+  linear-gradient(rgba(0,255,255,0.05) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(0,255,255,0.05) 1px, transparent 1px);
+
+  background-size:40px 40px;
+}
+
+/* ==========================================
+   LAYOUT
+========================================== */
+
+.game-layout{
+  display:flex;
+  min-height:100vh;
+}
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.sidebar{
+  width:340px;
+  background:rgba(0,0,0,0.45);
+  border-right:2px solid #00ffff;
+  padding:25px;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  box-shadow:0 0 25px rgba(0,255,255,0.3);
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+header{
+  text-align:center;
+}
+
+header h1{
+  font-size:3rem;
+  color:#00ffff;
+  text-shadow:
+  0 0 10px #00ffff,
+  0 0 20px #00ffff,
+  0 0 30px #00ffff;
+}
+
+.subtitle{
+  margin-top:10px;
+  color:#9be7ff;
+  font-size:2rem;
+}
+
+/* ==========================================
+   ESTADÍSTICAS
+========================================== */
+
+.stats{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.stat-box{
+  background:rgba(255,255,255,0.05);
+  border:2px solid #00ffff;
+  border-radius:15px;
+  padding:18px;
+  text-align:center;
+  box-shadow:0 0 15px rgba(0,255,255,0.2);
+  margin-bottom: 5%;
+}
+
+.stat-box span{
+  font-size:1.1rem;
+  color:#bffcff;
+}
+
+.stat-box h2{
+  font-size:2.3rem;
+  margin-top:10px;
+}
+
+/* ==========================================
+   ENERGÍA
+========================================== */
+
+.energy-wrapper{
+  background:rgba(255,255,255,0.05);
+  border:2px solid #00ffff;
+  border-radius:15px;
+  padding:15px;
+  box-shadow:0 0 15px rgba(0,255,255,0.2);
+}
+
+.energy-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:10px;
+}
+
+.energy-header span{
+  font-size:1.1rem;
+}
+
+.energy-bar{
+  width:100%;
+  height:25px;
+  background:#111;
+  border-radius:20px;
+  overflow:hidden;
+  border:2px solid rgba(255,255,255,0.1);
+}
+
+.energy-fill{
+  width:100%;
+  height:100%;
+  transition:0.4s;
+  box-shadow:0 0 15px currentColor;
+}
+
+/* ESTADOS ENERGÍA */
+
+.energy-high{
+  background:#00ff88;
+}
+
+.energy-medium{
+  background:#ffd000;
+}
+
+.energy-low{
+  background:#ff3c3c;
+}
+
+/* ==========================================
+   RANGO
+========================================== */
+
+.rank-box{
+  background:rgba(255,255,255,0.05);
+  border:2px solid #ff00ff;
+  border-radius:15px;
+  padding:20px;
+  text-align:center;
+  box-shadow:0 0 15px rgba(255,0,255,0.3);
+}
+
+.rank-box h3{
+
+  margin-bottom:10px;
+
+  color:#ffffff;
+}
+
+#rankText{
+
+  font-size:1.5rem;
+
+  color:#ff66ff;
+
+  text-shadow:0 0 10px #ff00ff;
+}
+
+/* ==========================================
+   COMBO
+========================================== */
+
+.combo-box{
+
+  background:rgba(255,255,255,0.05);
+
+  border:2px solid #ff8800;
+
+  border-radius:15px;
+
+  padding:20px;
+
+  text-align:center;
+
+  font-size:1.5rem;
+
+  color:#ffcc00;
+
+  box-shadow:0 0 20px rgba(255,150,0,0.4);
+
+  animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+
+  0%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.05);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+}
+
+/* ==========================================
+   PROGRESO
+========================================== */
+
+.progress-container{
+
+  background:rgba(255,255,255,0.05);
+
+  border-radius:15px;
+
+  padding:18px;
+
+  border:2px solid #00ffff;
+}
+
+#progressText{
+
+  margin-bottom:10px;
+
+  text-align:center;
+
+  font-size:1.5rem;
+}
+
+.progress-bar{
+
+  width:100%;
+
+  height:22px;
+
+  background:#111;
+
+  border-radius:20px;
+
+  overflow:hidden;
+}
+
+.progress-fill{
+
+  width:0%;
+
+  height:100%;
+
+  background:#00ffff;
+
+  box-shadow:0 0 15px #00ffff;
+
+  transition:0.5s;
+}
+
+/* ==========================================
+   BOTÓN INICIO
+========================================== */
+
+.start-btn{
+
+  padding:16px;
+  border:none;
+  border-radius:15px;
+  background:#00ffff;
+  color:black;
+  font-size:2rem;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+  margin-top: 5%;
+}
+
+.start-btn:hover{
+
+  transform:scale(1.05);
+
+  box-shadow:0 0 20px #00ffff;
+}
+
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+
+.main-content{
+
+  flex:1;
+
+  padding:30px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.card{
+
+  background:rgba(255,255,255,0.05);
+
+  border:2px solid #00ffff;
+
+  border-radius:20px;
+
+  padding:30px;
+
+  box-shadow:0 0 20px rgba(0,255,255,0.2);
+}
+
+/* ==========================================
+   CATEGORÍA
+========================================== */
+
+.category-box{
+
+  text-align:center;
+
+  margin-bottom:20px;
+}
+
+#categoryText{
+
+  font-size:2rem;
+
+  color:#00ffff;
+
+  text-shadow:0 0 10px #00ffff;
+}
+
+/* ==========================================
+   IMAGEN
+========================================== */
+
+.image-container{
+
+  display:flex;
+  justify-content:center;
+  margin-bottom:25px;
+
+
+}
+
+
+
+#deviceImage{
+
+  width:300px;
+  height:300px;
+  object-fit:contain;
+  border:2px solid #00ffff;
+  border-radius:20px;
+  padding:15px;
+  background:#F5F5F4;
+  transition:0.4s;
+}
+
+/* ==========================================
+   EFECTOS BLUR
+========================================== */
+
+.blur-heavy{
+ -webkit-filter:blur(12px);
+}
+
+.blur-medium{
+  -webkit-filter:blur(6px);
+}
+
+.blur-none{
+  -webkit-filter:blur(0px);
+}
+
+/* ==========================================
+   PISTAS
+========================================== */
+
+.hint-container{
+
+  background:rgba(0,0,0,0.35);
+  border-radius:15px;
+  padding:25px;
+  margin-bottom:25px;
+  text-align: center;
+}
+
+.hint-container h3{
+
+  color:#00ffff;
+  margin-bottom:15px;
+  font-size:2rem;
+
+}
+
+#hintText{
+
+  font-size:2rem;
+  line-height:1.6;
+  color: yellow;
+}
+
+/* ==========================================
+   CONTROLES
+========================================== */
+
+.controls{
+
+  display:flex;
+
+  justify-content:center;
+
+  margin-bottom:25px;
+}
+
+#nextHintBtn{
+  padding:15px 25px;
+  border:none;
+  border-radius:15px;
+  background:#ff00ff;
+  color:white;
+  font-size:1.5rem;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+#nextHintBtn:hover{
+
+  transform:scale(1.05);
+
+  box-shadow:0 0 15px #ff00ff;
+}
+
+/* ==========================================
+   OPCIONES
+========================================== */
+
+.options-container{
+
+  display:flex;
+  justify-content:center;
+  align-items:stretch;
+  gap:15px;
+  margin-top:30px;
+  width:100%;
+}
+
+/* BOTONES */
+
+.option-btn{
+
+  flex:1;
+  padding:20px 15px;
+  border:none;
+  border-radius:18px;
+  color:white;
+  font-size:2rem;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+  min-height:90px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  box-shadow:
+  0 0 12px rgba(255,255,255,0.15);
+}
+
+/* BOTÓN 1 */
+
+.option-btn:nth-child(1){
+
+  background:linear-gradient(
+    135deg,
+    #00c6ff,
+    #0072ff
+  );
+}
+
+/* BOTÓN 2 */
+
+.option-btn:nth-child(2){
+
+  background:linear-gradient(
+    135deg,
+    #ff512f,
+    #dd2476
+  );
+}
+
+/* BOTÓN 3 */
+
+.option-btn:nth-child(3){
+
+  background:linear-gradient(
+    135deg,
+    #11998e,
+    #38ef7d
+  );
+}
+
+/* HOVER */
+
+.option-btn:hover{
+
+  transform:translateY(-5px);
+
+  box-shadow:
+  0 0 20px rgba(255,255,255,0.35);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px){
+
+  .options-container{
+
+    flex-direction:column;
+  }
+
+}
+
+/* ==========================================
+   FEEDBACK
+========================================== */
+
+.feedback{
+
+  text-align:center;
+
+  margin-top:25px;
+
+  min-height:60px;
+
+  font-size:1.5rem;
+
+  font-weight:bold;
+}
+
+.correct{
+
+  color:#00ff88;
+
+  text-shadow:0 0 10px #00ff88;
+}
+
+.incorrect{
+
+  color:#ff4d4d;
+
+  text-shadow:0 0 10px #ff4d4d;
+}
+
+/* ==========================================
+   RESUMEN FINAL
+========================================== */
+
+.summary-container{
+
+  margin-top:30px;
+}
+
+.summary-container h2{
+
+  margin-bottom:20px;
+
+  color:#00ffff;
+
+  text-shadow:0 0 10px #00ffff;
+}
+
+.summary-card{
+
+  background:rgba(255,255,255,0.05);
+
+  border:2px solid #00ffff;
+
+  border-radius:15px;
+
+  padding:20px;
+
+  margin-bottom:15px;
+
+  box-shadow:0 0 15px rgba(0,255,255,0.1);
+}
+
+.summary-card h3{
+
+  margin-bottom:10px;
+}
+
+.correct-answer{
+
+  color:#00ff88;
+
+  margin-bottom:10px;
+}
+
+.wrong-answer{
+
+  color:#ff4d4d;
+
+  margin-bottom:10px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:950px){
+
+  .game-layout{
+
+    flex-direction:column;
+  }
+
+  .sidebar{
+
+    width:100%;
+  }
+
+  #deviceImage{
+
+    width:220px;
+    height:220px;
+  }
+
+  #hintText{
+
+    font-size:1.2rem;
+  }
+
+}
+
+
+/* ==========================================
+   ANIMACIÓN COMBO
+========================================== */
+
+.combo-animate{
+
+  animation:
+  comboPop 0.6s ease;
+}
+
+@keyframes comboPop{
+
+  0%{
+
+    transform:scale(1);
+
+    box-shadow:
+    0 0 10px #ff9900;
+  }
+
+  30%{
+
+    transform:scale(1.25);
+
+    box-shadow:
+    0 0 35px #ffcc00,
+    0 0 60px #ff8800;
+  }
+
+  60%{
+
+    transform:scale(0.95);
+  }
+
+  100%{
+
+    transform:scale(1);
+  }
+}
+
+@media (max-width:768px){
+
+body{background-color: #FFF}
+.sidebar{
+  display: flex;
+ 
+}
+.stats{
+  display:flex;
+  flex-direction:row;
+  gap:18px;
+}
+
+.addons{
+  display:flex;
+  flex-direction:row;
+  gap:18px;
+}
+.stat-box, .energy-wrapper, .rank-box, .combo-box, .progress-container{
+  width: 33%;
+  margin-bottom: 0px;
+}
+
+
+.energy-wrapper{ height: 20%;} 
+
+}
