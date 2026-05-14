@@ -96,11 +96,8 @@ header{
 }
 
 header h1{
-
   font-size:3rem;
-
   color:#00ffff;
-
   text-shadow:
   0 0 10px #00ffff,
   0 0 20px #00ffff,
@@ -108,11 +105,8 @@ header h1{
 }
 
 .subtitle{
-
   margin-top:10px;
-
   color:#9be7ff;
-
   font-size:2rem;
 }
 
@@ -127,7 +121,6 @@ header h1{
 }
 
 .stat-box{
-
   background:rgba(255,255,255,0.05);
   border:2px solid #00ffff;
   border-radius:15px;
@@ -746,28 +739,30 @@ header h1{
   }
 }
 
-/* ==========================================
-   ESCALADO GLOBAL PARA LANDSCAPE MÓVIL
-========================================== */
+@media (max-width:768px){
 
-.app-wrapper{
-  width:100%;
-  height:100%;
+body{background-color: #FFF}
+.sidebar{
+  display: flex;
+ 
+}
+.stats{
+  display:flex;
+  flex-direction:row;
+  gap:18px;
 }
 
-/* SOLO móvil horizontal */
-@media (max-height:500px) and (orientation: landscape){
+.addons{
+  display:flex;
+  flex-direction:row;
+  gap:18px;
+}
+.stat-box, .energy-wrapper, .rank-box, .combo-box, .progress-container{
+  width: 33%;
+  margin-bottom: 0px;
+}
 
-  body{
-    overflow:hidden;
-  }
 
-  .app-wrapper{
-    transform: scale(0.7); /* ajustable */
-    transform-origin: top left;
-
-    width: 142.85%;  /* compensación */
-    height: 142.85%;
-  }
+.energy-wrapper{ height: 20%;} 
 
 }
