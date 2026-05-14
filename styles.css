@@ -214,8 +214,11 @@ header h1{
 }
 
 #rankText{
+
   font-size:1.5rem;
+
   color:#ff66ff;
+
   text-shadow:0 0 10px #ff00ff;
 }
 
@@ -224,14 +227,23 @@ header h1{
 ========================================== */
 
 .combo-box{
+
   background:rgba(255,255,255,0.05);
+
   border:2px solid #ff8800;
+
   border-radius:15px;
+
   padding:20px;
+
   text-align:center;
+
   font-size:1.5rem;
+
   color:#ffcc00;
+
   box-shadow:0 0 20px rgba(255,150,0,0.4);
+
   animation:pulse 1s infinite;
 }
 
